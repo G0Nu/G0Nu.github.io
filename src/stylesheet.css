@@ -1,0 +1,130 @@
+:root {                         /* <--- Declarar variables en CSS */
+    --White_smoke: #f5f5f5;
+    --Night: #141414;
+    --Jet_gray: #333333;
+    --Ash_gray: #BCC8BF;
+    --Platinum: #E0E0E0;
+    --fuentePcpal: font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+html {
+    font-size: 62.5%;           /* <--- 1rem = 10px */
+    box-sizing: border-box;     /* <--- Elimina Box Model */
+    scroll-snap-type: y proximity;
+}
+
+*, *::before, *::after {        /* <--- Elimina Box Model */
+    box-sizing: inherit;
+}
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.6rem;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+header {
+    display: flex;
+    flex-direction: column 2,1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 7rem;
+}
+.logo {
+    max-width: 17rem;
+    max-height: 17rem;
+    align-items: start;
+}
+.nav_bar {
+    display: flex;
+    flex-direction: row; 
+    
+}
+.nav_bar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    
+}
+.nav_bar li {
+    justify-content: space-between;
+    padding: 2rem;
+}
+.nav_btn{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--White_smoke);
+    transition: text-decoration ,color    ease-in 1s;
+    background: none;
+}
+
+.nav_btn:hover{
+    text-decoration: underline;
+    color: var(--Ash_gray);
+    transform-origin: left;
+
+}
+.nav_bar::after{
+    text-decoration: underline;
+    color: var(--Ash_gray);
+
+}
+
+.header_page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.sakura {
+    width: 60vw;
+}
+.introduction__text {
+    display: flex;
+    align-items: right;
+    justify-content:space-evenly;
+}
+.introduction__text h1{
+    color: var(--White_smoke)   ;
+}
+.contact__btn {
+    border-radius: 4px;
+    background-color: var(--Ash_gray);
+    border: none;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: ease-in 1s;
+    cursor: pointer;
+    margin: 5px;
+}   
+.contact__btn a{
+    color: var(--White_smoke)   ;
+}
+.contact__btn:hover{
+    background-color: var(--Jet_gray);
+}
+body{
+    overflow-x: hidden;
+    font-family: var(--fuentePcpal);
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        var(--White_smoke) 0%,
+        var(--White_smoke) 50%,
+        var(--Night) 50%,
+        var(--Night) 100%
+    );
+
+}
