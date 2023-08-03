@@ -33,6 +33,18 @@ h3 {
 a {
     text-decoration: none;
 }
+a:visited { 
+    text-decoration: none; 
+}
+a:hover { 
+    text-decoration: none; 
+}
+a:focus { 
+    text-decoration: none; 
+}
+a:hover, a:active { 
+    text-decoration: none; 
+}
 img {
     max-width: 100%;
     height: auto;
@@ -61,6 +73,7 @@ header {
         var(--Night) 100%
     );
 }
+
 @media (max-width: 890px) {
     header {
         background: var(--White_smoke);
@@ -85,6 +98,11 @@ header {
     transform-origin: 50%;  
     right: 15%;
     bottom: 12%;
+}
+@media (max-width: 1374px) {
+    .bamboo{
+        right: 23%;
+    }
 }
 .logo {
     max-width: 17rem;
@@ -150,7 +168,59 @@ header {
 .introduction__text h1{
     color: var(--White_smoke)   ;
 }
+.wrapper {
+    display: inline-flex;
+    margin-bottom: 6rem;
+}
+.wrapper .icon {
+    margin: 0 20px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper a{
+    text-decoration: none;
+    color: var(--Night);
+    }
+.wrapper a:visited { 
+    text-decoration: none;
+    color: var(--Night); 
+    }
+.wrapper a:hover { 
+    text-decoration: none;
+    color: var(--White_smoke); 
+    }
+.wrapper .icon span{
+    height: 6rem;
+    width: 6rem;
+    display: block;
+    background: var(--White_smoke);
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+.wrapper .icon span i{
+    font-size: 2.5rem;
+    line-height: 6rem;
+}
+.wrapper .icon:hover span i{
+    color: var(--White_smoke);
+}
+.wrapper .github:hover span{
+    background-color: var(--Jet_gray);
+}
+.wrapper .linkedin:hover span{
+    background-color: rgba(63, 136, 231, 0.87);
+}
+.wrapper .instagram:hover span{
+    background-color: salmon;
+}
+.wrapper .twitter:hover span{
+    background-color: rgba(63, 136, 231, 0.87);
+}
+
 .contact__btn {
+    
     border-radius: 4px;
     background-color: var(--Ash_gray);
     border: none;
@@ -160,7 +230,8 @@ header {
     width: 200px;
     transition: ease-in 1s;
     cursor: pointer;
-    margin: 5px;
+    
+    
 }   
 .contact__btn a{
     color: var(--White_smoke)   ;
@@ -175,6 +246,22 @@ header {
     .introduction_space{
         width: 10vw;
     }
+    .contact__btn {
+        margin: auto auto;
+        justify-content: center ;
+    }
+    .header_page{
+        display: flex;
+        justify-content: space-around;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: space-around;
+    }
+    .introduction_space{
+        display: none;
+    }
+
 
 }
 .about_me{
