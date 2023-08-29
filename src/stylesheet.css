@@ -542,7 +542,7 @@ header {
 }
 footer{
     background: var(--Jet_gray);
-    height: 70vh;
+    height: 60vh;
     width: 100vw;
 }
 .form_container {

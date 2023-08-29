@@ -9,12 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/078fe8506e.js" crossorigin="anonymous"></script>
-    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-    (function(){
-        emailjs.init("_JGSqunf-owdBwI4W");
-    })();
-    </script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("_JGSqunf-owdBwI4W");
+})();
+</script>
+
     <script src="/src/index.js"></script>
 </head>
 <body>
@@ -22,18 +25,20 @@
         <header>
             <div class="logo">
                 <img src="./src/images/Logo_black.svg" alt="logo">
+                <a name="home"></a>
             </div>
             <div class="nav_bar">
                 <nav>
                     <ul>
-                        <li><a class="nav_btn" href="">Home</a></li>
-                        <li><a class="nav_btn" href="">About me</a></li>
-                        <li><a class="nav_btn" href="">Projects</a></li>
-                        <li><a class="nav_btn" href="">Contact</a></li>
+                        <li><a class="nav_btn" href="#home">Home</a></li>
+                        <li><a class="nav_btn" href="#about_me">About me</a></li>
+                        <li><a class="nav_btn" href="#projects">Projects</a></li>
+                        <li><a class="nav_btn" href="#contact_me">Contact</a></li>
                     </ul>
                 </nav>        
             </div>
         </header>
+
         <section class="header_page">
             <div class="image bamboo">
                 <img src="./src/Parallac/Bamboo-Branch-PNG-Transparent-Image.png" alt="Bamboo">
@@ -47,29 +52,29 @@
                 </div>
                 <div class="wrapper">
                     <div class="icon github">
-                        <a href="https://github.com/G0Nu">
+                        <a href="https://github.com/G0Nu" target="_blank">
                             <span><i class="fab fa-github"></i></span>
                         </a>
                     </div>
                     <div class="icon linkedin">
-                        <a href="https://www.linkedin.com/in/diego-nu%C3%B1o-130954209/">
+                        <a href="https://www.linkedin.com/in/diego-nu%C3%B1o-130954209/" target="_blank">
                             <span><i class="fab fa-linkedin"></i></span>
                         </a>
                     </div>
                     <div class="icon instagram">
-                        <a href="https://www.instagram.com/diegonuno_/">
+                        <a href="https://www.instagram.com/diegonuno_/" target="_blank">
                             <span><i class="fab fa-instagram"></i></span>
                         </a>
                     </div>
                     <div class="icon twitter">
-                        <a href="https://twitter.com/DiegoNu06646411">
+                        <a href="https://twitter.com/DiegoNu06646411" target="_blank">
                             <span><i class="fab fa-twitter"></i></span>
                         </a>
                     </div>
                     
                 </div>
                 <div class="contact__btn">
-                    <a href="">Download Resume</a>
+                    <a href="./src/Documents/Diego Nuno.pdf" download="diegonuno_cv">Download Resume</a>
                 </div>
             </div>
             <div class="wave">
@@ -78,7 +83,9 @@
                 </svg>
             </div>
         </section>
+        <a name="about_me"></a>
         <section class="about_me">
+
         <div class="about_me__text">
             <h2>About me</h2>
             <h3>Hi visitors, i'm Diego. I currently have 19 years old, i'm a enthusiastic, energetic and carismatic person, I love science (such as physics) and technology. I like to discover new things, embrace myself with challenges and learn a lot. <br><br>I like Martial Arts, Coffee, Videogames, Art & Cultures. <br> <br>I'm currently learning Mandarin, Deep Learning with Python, some machine learning stuff and of course web development.</h3>
@@ -94,14 +101,16 @@
                 <span></span>
             </div>
         </div>
-        
+
     </section>
+    <a name="projects"></a>
     <section class="showcase">
         <div class="wave_showcase">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
             </svg>
         </div>
+
         <div class="split_screen">
             <div class="showcase__skills">
                 <h2>Skills</h2>
@@ -115,6 +124,7 @@
                 </div>
             </div>
             <div class="showcase__projects">
+
                 <h2>Projects</h2>
                 <!--Card-->
                 <div class="cards">
@@ -141,55 +151,53 @@
         <div class="form_container">
             <form>
                 <h3>Contact me!</h3>
+                <a name="contact_me"></a>
                 <label for="name">
                     <input type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label for="phone">
-                    <input type="text" name="phone" id="phone" placeholder="Phone number">
                 </label>
                 <label for="email">
                     <input type="email" name="email" id="email" placeholder="Email">
                 </label>
                 <label for="reason">
-                    <textarea name="reason" id="reason" rows="4" placeholder="Tell me more..."></textarea>
+                    <textarea name="message" id="message" rows="4" placeholder="Tell me more..."></textarea>
                 </label>
-                <button onclick="sendMail()">Send</button>
+                <button type="button" onclick="sendMail()">Send</button>
             </form>
             <div class="nav_footer">
 
                 <div class="wrapper" id="wr_footer">
                     <div class="icon github">
-                    <a href="https://github.com/G0Nu">
+                    <a href="https://github.com/G0Nu" target="_blank">
                         <span><i class="fab fa-github"></i></span>
                     </a>
                 </div>
                 <div class="icon linkedin">
-                    <a href="https://www.linkedin.com/in/diego-nu%C3%B1o-130954209/">
+                    <a href="https://www.linkedin.com/in/diego-nu%C3%B1o-130954209/" target="_blank">
                         <span><i class="fab fa-linkedin"></i></span>
                     </a>
                 </div>
                 <div class="icon instagram">
-                    <a href="https://www.instagram.com/diegonuno_/">
+                    <a href="https://www.instagram.com/diegonuno_/" target="_blank">
                         <span><i class="fab fa-instagram"></i></span>
                     </a>
                 </div>
                 <div class="icon twitter">
-                    <a href="https://twitter.com/DiegoNu06646411">
+                    <a href="https://twitter.com/DiegoNu06646411" target="_blank">
                         <span><i class="fab fa-twitter"></i></span>
                     </a>
                 </div>
                 
             </div>
             <div class="contact__btn" id="download_resume_btn">
-                <a href="">Download Resume</a>
+                <a href="./src/Documents/Diego Nuno.pdf" download="diegonuno_cv">Download Resume</a>
             </div>
             <div class="nav_bar" id="nav_end">
                 <nav>
                     <ul>
-                        <li><a class="nav_btn" href="">Home</a></li>
-                        <li><a class="nav_btn" href="">About me</a></li>
-                        <li><a class="nav_btn" href="">Projects</a></li>
-                        <li><a class="nav_btn" href="">Contact</a></li>
+                        <li><a class="nav_btn" href="#home">Home</a></li>
+                        <li><a class="nav_btn" href="#about_me">About me</a></li>
+                        <li><a class="nav_btn" href="#projects">Projects</a></li>
+                        <li><a class="nav_btn" href="#contact_me">Contact</a></li>
                     </ul>
                 </nav>        
             </div>

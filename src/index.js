@@ -2,16 +2,18 @@ function sendMail(){
 
     var parameters = {
         name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
         email: document.getElementById("email").value,
-        reason: document.getElementById("reason").value,
+        message: document.getElementById("message").value,
     };
-    const serviceID = "service_x5vjoiq";
-    const templateID = "template_9o7ribe";
-    emailjs.send("service_x5vjoiq","template_9o7ribe",parameters).then(function (res) {
-        alert("Success "+res.status);
-    })
+
+    emailjs.send("service_x5vjoiq","template_321ex74",parameters,).then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+     }, function(error) {
+        console.log('FAILED...', error);
+     });
     /*
+        const serviceID = "service_x5vjoiq";
+    const templateID = "template_9o7ribe";
     emailjs
     .send(serviceID,templateID,parameters)
     .then((res) => {
