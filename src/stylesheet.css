@@ -12,6 +12,8 @@ html {
     box-sizing: border-box;     /* <--- Elimina Box Model */
     scroll-snap-type: y proximity;
 
+    
+
 }
 
 *, *::before, *::after {        /* <--- Elimina Box Model */
@@ -48,6 +50,7 @@ a:hover, a:active {
     text-decoration: none; 
 }
 img {
+
     max-width: 100%;
     height: auto;
 }
@@ -61,11 +64,15 @@ img {
 
 }
 header {
+
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: column 2,1;
     align-items: center;
     justify-content: space-between;
     padding: 0;
+    width: 100vw;
 
     background: linear-gradient(
         to right,
@@ -74,6 +81,17 @@ header {
         var(--Night) 50%,
         var(--Night) 100%
     );
+    transition: background 0.4 ease-in-out;
+}
+.scrolled{
+    z-index: 1000;
+    background: var(--White_smoke);
+}
+.scrolled .nav_bar a{
+    color: var(--Night);
+}
+.scrolled .nav_bar a:hover{
+    color: var(--Ash_gray);
 }
 
 @media (max-width: 970px) {
@@ -93,13 +111,15 @@ header {
 .image {
     position: absolute;
 }
+
+
 .bamboo{
     width: 100%;
     height: 100%;
     transform: translateZ(4px) scale(0.5);
     transform-origin: 50%;  
     right: 15%;
-    bottom: 12%;
+    bottom: 16%;
 }
 @media (max-width: 1374px) {
     .bamboo{
@@ -242,6 +262,9 @@ header {
     background-color: var(--Jet_gray);
 }
 @media (max-width: 970px) {
+    .image, .bamboo{
+        display: none;
+    }
     .header_page{
         background: var(--Night);
     }
@@ -279,6 +302,7 @@ header {
     height: 90vh;
     display: flex;
     flex-direction: column 2,1;
+    width: 100vw;
 
     
 }
@@ -499,9 +523,11 @@ header {
     }
 }
 .cards {
+    padding-right: 2rem;
     margin-left: 0;
     padding-left: 0;
     display: flex;
+    gap: 5rem;
     justify-content: space-around;
 }
 .card{
