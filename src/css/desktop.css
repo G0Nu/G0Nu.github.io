@@ -94,20 +94,7 @@ header {
     color: var(--Ash_gray);
 }
 
-@media (max-width: 970px) {
-    header {
-        background: var(--White_smoke);
-        
-    }
-    .nav_bar a{
-        color: var(--Night);
-    }
-    .bamboo{
-        opacity: 0%;
-    }
 
-
-}
 .image {
     position: absolute;
 }
@@ -261,35 +248,7 @@ header {
 .contact__btn:hover{
     background-color: var(--Jet_gray);
 }
-@media (max-width: 970px) {
-    .image, .bamboo{
-        display: none;
-    }
-    .header_page{
-        background: var(--Night);
-    }
-    .introduction_space{
-        width: 10vw;
-    }
-    .contact__btn {
-        margin: auto auto;
-        justify-content: center ;
-    }
-    .header_page{
-        display: flex;
-        justify-content: space-around;
-    }
-    .wrapper{
-        display: flex;
-        justify-content: space-around;
-    }
-    .introduction_space{
-        display: none;
-    }
-    
 
-
-}
 .about_me{
     background: linear-gradient(
         to right,
@@ -328,7 +287,7 @@ header {
     display: flex;
     width: 30rem;
     height: 30rem;
-    background: url(./images/profile_pic.png);
+    background: url(/src/images/profile_pic.png);
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 50%;
@@ -374,93 +333,6 @@ header {
     transform: translateZ(4px) scale(0.5);
     transform-origin: 50%; 
 }
-
-@media (max-width: 970px) {
-    .about_me{
-        background: var(--White_smoke);
-    }
-    .about_me__text h2{
-        color: var(--Night);
-    }
-    .about_me__text h3{
-        color: var(--Night);
-    }
-    .leaves{
-        display: none;
-    }
-    .introduction{
-        width: 100vw;
-    }
-    .wrapper{
-        justify-content: center;
-    }
-    }
-    @media (max-width: 850px) {
-    .about_me{
-        flex-direction: column 1,2;
-    }
-    .about_me__text{
-        order: 2;
-        width: 100vw;
-    }
-    .about_me__text h3{
-        width: 90vw;
-    }
-    .about_me__space{
-        display: none;
-    }
-    
-    html {
-        background-color: var(--White_smoke);
-    }
-    .header_page{
-        position: relative;
-    }
-    .wave {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-    }
-    
-    .wave svg {
-        position: relative;
-        display: block;
-        width: calc(135% + 1.3px);
-        height: 140px;
-        transform: rotateY(180deg);
-    }
-    
-    .wave{
-        fill: var(--White_smoke);
-    }
-    .showcase{
-        position: relative;
-    }
-    .wave_showcase {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-    }
-    
-    .wave_showcase svg {
-        position: relative;
-        display: block;
-        width: calc(135% + 1.3px);
-        height: 140px;
-    }
-    
-    .wave_showcase .shape-fill {
-        fill: var(--White_smoke);
-    }
-    }
-
 
 .showcase{
     padding: 4rem;
@@ -511,17 +383,7 @@ header {
     color: var(--White_smoke);
 }
 
-@media (max-width: 970px) {
-    .showcase{
-        background: var(--Night);
-    }
-    .showcase h2{
-        color: var(--White_smoke);
-    }
-    .split_screen {
-        display: inline;
-    }
-}
+
 .cards {
     padding-right: 2rem;
     margin-left: 0;
@@ -565,6 +427,29 @@ header {
 .second img{
     background-size: cover;
     border-radius: 5%;
+}
+@media (max-width: 1200px) {
+    .skills{
+        grid-template-columns: auto auto;
+    }
+}
+@media (max-width: 1300px) {
+    .leaves .one{
+        left: 70%;
+    }
+    .leaves .two{
+    right: 60%;
+   }
+   .leaves .three{
+    rotate: 320deg;
+    right: 50%;
+    top: 60%;
+   }
+   .leaves .four{
+    rotate: 100deg;
+    left: 50%;
+    top: 55%;
+   }
 }
 footer{
     background: var(--Jet_gray);
