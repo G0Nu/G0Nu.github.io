@@ -1,3 +1,12 @@
+:root {                         /* <--- Declarar variables en CSS */
+    --White_smoke: #f5f5f5;
+    --Night: #141414;
+    --Jet_gray: #333333;
+    --Ash_gray: #BCC8BF;
+    --Platinum: #E0E0E0;
+    --fuentePcpal: font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
 .about_me{
     background: var(--White_smoke);
 }
@@ -50,6 +59,10 @@
     display: none;
 }
 
+.wave {
+    bottom: 10px;
+}
+
 header {
     background: var(--White_smoke);
     
@@ -79,6 +92,10 @@ header {
 }
 .skills{
     grid-template-columns: auto auto auto;
+}
+#nav_end a{
+    color: var(--White_smoke);
+    
 }
 
     @media (max-width: 850px) {
