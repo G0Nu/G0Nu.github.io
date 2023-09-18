@@ -55,12 +55,16 @@ form {
 #close_icon{
     display: none;
 }
-#check:checked~.icons_nav #ham_icon{
+#check:checked~.hamburguer_btn #ham_icon{
     display: none;
 }
-#check:checked~.icons_nav #close_icon{
+#check:checked~.hamburguer_btn #close_icon{
     display: flex;
 }
+#check:checked~#nav_bar__top {
+    height: 40vh;
+    transform: translateY(0rem);
+} 
 
 @media (max-width: 500px) {
 
@@ -69,6 +73,7 @@ form {
         display: flex;
         padding-right: 2rem;
         order: 0;
+        transition: .3 ease;
     }
     .logo{
         margin-left: 0;
@@ -90,6 +95,11 @@ form {
         order: 1;
         margin-top: 0;
         text-align: center;
+        transform: translateY(3rem);
+        transition: .8s ease;
+        overflow: hidden;
+        background:var(--Ash_gray);
+        opacity: 80%;
     }
     #nav_bar__top nav{
         width: 100vw;
@@ -98,10 +108,9 @@ form {
     #nav_bar__top ul{
         flex-direction: column;
         grid-template-columns: auto auto;
+        
     }  
-    #check:checked~#nav_bar__top{
-       height: 40vh;
-     } 
+
     .cards {
         flex-direction: column;
     }
@@ -118,6 +127,7 @@ form {
 
 }
 @media (max-width: 555px) {
+    
     .introduction__text h1{
         text-align: center;
     }
