@@ -7,6 +7,22 @@
     --fuentePcpal: font-family: 'Manrope', sans-serif;
     font-family: 'Montserrat', sans-serif;
 }
+#contact_top {
+    margin: 6rem auto;
+}
+.hamburguer_btn{
+    width: auto;
+    height: auto;
+}
+.hamburguer_btn i{
+    width: auto;
+    height: auto;
+    font-size: 4rem;
+}
+
+.header_page{
+    height: auto;
+}
 .form_container{
     flex-direction: column;
     padding-left: 0;
@@ -31,9 +47,70 @@ form {
 .wave svg{
 
     height: 4rem;
-
 }
+#wr_footer {
+   margin-bottom: 3rem;
+}
+
+#close_icon{
+    display: none;
+}
+#check:checked~.hamburguer_btn #ham_icon{
+    display: none;
+}
+#check:checked~.hamburguer_btn #close_icon{
+    display: flex;
+}
+#check:checked~#nav_bar__top {
+    height: 40vh;
+    transform: translateY(0rem);
+} 
+
 @media (max-width: 500px) {
+
+    .hamburguer_btn{
+        position: sticky;
+        display: flex;
+        padding-right: 2rem;
+        order: 0;
+        transition: .3 ease;
+    }
+    .logo{
+        margin-left: 0;
+        padding-left: 0;
+        width: 13rem;
+        height: auto;
+        order: -1;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #nav_bar__top{
+        width: 100vw;
+        height: 0vh;
+        order: 1;
+        margin-top: 0;
+        text-align: center;
+        transform: translateY(3rem);
+        transition: .8s ease;
+        overflow: hidden;
+        background:var(--Ash_gray);
+        opacity: 80%;
+    }
+    #nav_bar__top nav{
+        width: 100vw;
+    }
+
+    #nav_bar__top ul{
+        flex-direction: column;
+        grid-template-columns: auto auto;
+        
+    }  
+
     .cards {
         flex-direction: column;
     }
@@ -43,15 +120,14 @@ form {
     .showcase__projects {
         height: auto;
     }
-    .logo { 
-        display: none;
-    }
     header {
-        justify-content: space-around;
+        justify-content: space-between;
     }
+    
 
 }
 @media (max-width: 555px) {
+    
     .introduction__text h1{
         text-align: center;
     }
@@ -73,9 +149,10 @@ form {
     }
     #wr_footer {
         gap: 2rem;
+        margin-bottom: 0;
     }
     .contact__btn {
-        margin: 3rem auto;
+        margin: 6rem auto;
     }
     #nav_end {
         margin-top: 0;

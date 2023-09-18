@@ -83,6 +83,13 @@ header {
     );
     transition: background 0.4 ease-in-out;
 }
+.hamburguer_btn {
+    display: none;
+}
+#check {
+    display: none;
+}
+
 .scrolled{
     z-index: 1000;
     background: var(--White_smoke);
