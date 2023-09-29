@@ -37,9 +37,7 @@ h3 {
 a {
     text-decoration: none;
 }
-a:visited { 
-    text-decoration: none; 
-}
+
 a:hover { 
     text-decoration: none; 
 }
@@ -110,10 +108,14 @@ header {
 .bamboo{
     width: 100%;
     height: 100%;
-    transform: translateZ(4px) scale(0.5);
+    transform: translateZ(1px) scale(0.5);
     transform-origin: 50%;  
     right: 15%;
     bottom: 16%;
+    z-index: 9rem;
+}
+.introduction {
+    z-index: 10px;
 }
 @media (max-width: 1374px) {
     .bamboo{
@@ -157,6 +159,11 @@ header {
 .nav_bar::after{
     text-decoration: underline;
     color: var(--Ash_gray);
+
+}
+.nav_btn:active{
+    text-decoration: underline;
+    color: var(--Platinum);
 
 }
 
@@ -389,7 +396,10 @@ header {
 .showcase__projects h2{
     color: var(--White_smoke);
 }
-
+.project_btns{
+    text-decoration: none;
+    color: var(--Night);
+}
 
 .cards {
     padding-right: 2rem;

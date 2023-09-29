@@ -41,8 +41,21 @@ form {
 .wave_showcase{
     top: -1px;
 }
+
+.scrolled .nav_bar a:hover {
+    color: var(--White_smoke);
+    text-decoration: none;
+}
+.scrolled .nav_bar a:active {
+    color: var(--White_smoke);
+    text-decoration: none;
+}
+.nav_btn:hover{
+    color: var(--White_smoke);
+}
+
 .wave {
-    top: 3px;
+    bottom: -1px;
 }
 .wave svg{
 
